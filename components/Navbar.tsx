@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/cn";
 import {
   AnimatePresence,
   motion,
@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import React, { useState } from "react";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export const Navbar = ({
   navItems,
@@ -26,7 +27,6 @@ export const Navbar = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      console.log(scrollYProgress.get());
       let direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() <= 1) {
@@ -55,44 +55,39 @@ export const Navbar = ({
         transition={{
           duration: 0.2,
         }}
-        // flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4
-        className={"flex max-w-fit items-center justify-between"}
-        // style={{
-        //   backdropFilter: "blur(16px) saturate(180%)",
-        //   backgroundColor: "rgba(17, 25, 40, 0.75)",
-        //   borderRadius: "12px",
-        //   border: "1px solid rgba(255, 255, 255, 0.125)",
-        // }}
       >
-        {/* Home */}
-        <Link
-          key={"home"}
-          href={""}
-          className={cn("relative items-center flex space-x-1")}
-        >
-          <span className="flex flex-row text-sm !cursor-pointer">
-            <div className="text-neutral-600 dark:hover:text-neutral-300 dark:text-neutral-50 hover:text-neutral-800">
-              John
-            </div>
-            <div className="text-gold">.</div>
-          </span>
-        </Link>
-
-        {/* Others */}
-        {navItems.map((navItem: any, idx: number) => (
+        <div className="flex items-center">
+          {/* Home */}
           <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
+            key={"home"}
+            href={""}
+            className={cn("relative items-center flex space-x-1")}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            {/* add !cursor-pointer */}
-            {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className="flex flex-row text-3xl !cursor-pointer">
+              <div className="text-neutral-600 dark:hover:text-neutral-300 dark:text-neutral-50 hover:text-neutral-800">
+                John
+              </div>
+              <div className="text-yellow-400">.</div>
+            </span>
           </Link>
-        ))}
+
+          {/* Others */}
+          <div className="flex justify-center items-center">
+            {navItems.map((navItem: any, idx: number) => (
+              <Link
+                key={`link=${idx}`}
+                href={navItem.link}
+                className={cn(
+                  "relative dark:text-neutral-50 items-center px-5 flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+                )}
+              >
+                <span className="block sm:hidden">{navItem.icon}</span>
+                <span className="text-lg  !cursor-pointer">{navItem.name}</span>
+              </Link>
+            ))}
+            <ThemeSwitcher />
+          </div>
+        </div>
       </motion.div>
     </AnimatePresence>
   );
