@@ -56,7 +56,7 @@ export const Navbar = ({
           duration: 0.2,
         }}
       >
-        <div className="flex items-center">
+        <div className="flex justify-between items-center">
           {/* Home */}
           <Link
             key={"home"}
