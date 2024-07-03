@@ -1,5 +1,4 @@
 import React from "react";
-
 export const SunIcon = (
   props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
 ) => (

@@ -17,16 +17,11 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   function handleValueChange() {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    setTheme(theme === "light" ? "dark" : "light");
   }
 
   return (
     <div className="z-20">
-      <h2 className="text-black">hello testing switch</h2>
       <Switch
         defaultSelected
         size="lg"
@@ -35,8 +30,6 @@ export function ThemeSwitcher() {
         endContent={<MoonIcon />}
         onChange={handleValueChange}
       ></Switch>
-      {/* <button onClick={() => setTheme("light")}></button>
-      <button onClick={() => setTheme("dark")}></button> */}
     </div>
   );
 }

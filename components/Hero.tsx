@@ -13,12 +13,6 @@ const Hero = () => {
 
   return (
     <div className="pb-60 pt-36">
-      {/* spotlights */}
-      {/* <Spotlight
-        className="top-28 left-60 md:-left-32 md:-top-20 h-[60vh] w-[40vw]"
-        fill="black"
-      /> */}
-
       <Spotlight className="left-20 top-10 h-[60vh] w-[100vw]" fill="black" />
 
       {/* dot background */}
