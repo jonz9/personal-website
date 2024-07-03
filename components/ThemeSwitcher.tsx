@@ -29,6 +29,7 @@ export function ThemeSwitcher() {
         startContent={<SunIcon />}
         endContent={<MoonIcon />}
         onChange={handleValueChange}
+        disableAnimation={false}
       ></Switch>
     </div>
   );

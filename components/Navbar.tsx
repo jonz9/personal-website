@@ -9,7 +9,6 @@ import {
 import Link from "next/link";
 import React, { useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import Switcher from "./Switcher";
 
 export const Navbar = ({
   navItems,
@@ -57,7 +56,7 @@ export const Navbar = ({
           duration: 0.2,
         }}
       >
-        <div className="flex justify-between items-center">
+        <div className="flex items-center justify-between py-2">
           {/* Home */}
           <Link
             key={"home"}
@@ -86,7 +85,9 @@ export const Navbar = ({
                 <span className="text-lg  !cursor-pointer">{navItem.name}</span>
               </Link>
             ))}
-            <ThemeSwitcher />
+            <span className="px-5">
+              <ThemeSwitcher />
+            </span>
           </div>
         </div>
       </motion.div>
