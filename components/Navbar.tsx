@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import React, { useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import Switcher from "./Switcher";
 
 export const Navbar = ({
   navItems,

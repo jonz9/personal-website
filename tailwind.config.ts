@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const svgToDataUri = require("mini-svg-data-uri");
+const { nextui } = require("@nextui-org/react");
 
 const colors = require("tailwindcss/colors");
 const {
@@ -13,14 +14,14 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    light: "fff",
+    dark: "000",
     extend: {
       colors: {
-        primary: {
-          white: "fff",
-          black: "000",
-        },
+        primary: {},
         secondary: {},
       },
       screens: {
@@ -48,6 +49,7 @@ const config: Config = {
     },
   },
   plugins: [
+    nextui(),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
