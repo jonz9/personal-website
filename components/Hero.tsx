@@ -5,10 +5,9 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { FlipWords } from "./ui/flip-words";
 import Photo from "./Photo";
+import { jobTitles } from "@/data";
 
 const Hero = () => {
-  const words = ["Software Developer", "UI Designer", "Computer Engineer"];
-
   return (
     <div className="pb-60 pt-36">
       <Spotlight className="left-20 top-10 h-[60vh] w-[100vw]" fill="black" />
@@ -22,7 +21,7 @@ const Hero = () => {
           <div className="col-span-2 p-4 items-left">
             {/* Name and Job */}
             <FlipWords
-              words={words}
+              words={jobTitles}
               className="text-3xl font-medium text-yellow-500"
             />
             <p className="text-7xl font-bold relative bg-clip-text bg-gradient-to-b from-gray-800 to-gray-950">

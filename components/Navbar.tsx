@@ -17,10 +17,11 @@ export const Navbar = ({
   navItems: {
     name: string;
     link: string;
-    icon?: JSX.Element;
+    // icon?: JSX.Element;
   }[];
   className?: string;
 }) => {
+  // Hooks
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
 
@@ -59,8 +60,9 @@ export const Navbar = ({
         <div className="flex items-center justify-between py-2">
           {/* Home */}
           <Link
-            key={"home"}
-            href={""}
+            key={"Home"}
+            href={"/"}
+            scroll
             className={cn("relative items-center flex space-x-1")}
           >
             <span className="flex flex-row text-3xl !cursor-pointer">
@@ -77,6 +79,7 @@ export const Navbar = ({
               <Link
                 key={`link=${idx}`}
                 href={navItem.link}
+                scroll
                 className={cn(
                   "relative dark:text-neutral-50 items-center px-5 flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
                 )}
