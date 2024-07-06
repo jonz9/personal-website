@@ -24,16 +24,16 @@ const Footer = () => {
   }
 
   return (
-    <div className="w-full flex justify-between my-3 items-center">
-      <p>John Zhang © 2024</p>
-      <div className="grid grid-cols-3 items-center gap-4">
+    <div className="w-full flex justify-between px-[25em] items-center mt-auto pb-20">
+      <p className="px-5 text-gray-400">John Zhang © 2024</p>
+      <div className="grid grid-cols-3 items-center gap-4 px-5">
         {footerItems.map((footerItems: any, idx: number) => (
           <a
             key={`link=${idx}`}
             href={footerItems.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-1 bg-slate-200 hover:bg-slate-300 dark:bg-slate-600 border-1 hover:dark:bg-slate-500 rounded-md"
+            className="p-1 bg-slate-200 hover:bg-slate-300 dark:bg-slate-600 border-1 hover:dark:bg-slate-500 dark:border-slate-500 rounded-md"
           >
             {footerItems.icon}
           </a>

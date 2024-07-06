@@ -43,27 +43,28 @@ export const Navbar = ({
   });
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
-      >
-        <div className="flex items-center justify-between py-2">
+    <div className="w-full px-[25em]">
+      <AnimatePresence mode="wait">
+        <motion.div
+          initial={{
+            opacity: 1,
+            y: -100,
+          }}
+          animate={{
+            y: visible ? 0 : -100,
+            opacity: visible ? 1 : 0,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
+          className="flex relative justify-between items-center py-2 mx-auto"
+        >
           {/* Home */}
           <Link
             key={"Home"}
             href={"/"}
             scroll
-            className={cn("relative items-center flex space-x-1")}
+            className={cn("relative items-center flex space-x-1 px-5")}
           >
             <span className="flex flex-row text-3xl !cursor-pointer">
               <div className="text-neutral-600 dark:hover:text-neutral-300 dark:text-neutral-50 hover:text-neutral-800">
@@ -92,9 +93,9 @@ export const Navbar = ({
               <ThemeSwitcher />
             </span>
           </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };
 

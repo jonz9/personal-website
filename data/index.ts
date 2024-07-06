@@ -10,8 +10,17 @@ export const navItems = [
   { name: "Projects", link: "/projects" },
 ];
 
-export const About = [];
+export const aboutItems = [];
 
-export const Experience = [];
+export const experienceItems = [{}];
 
-export const Projects = [];
+export const projectItems = [
+  {
+    name: "CryptoKet",
+    subtitle: "",
+    link: "",
+    github: "",
+    description: "",
+    image: "",
+  },
+];
