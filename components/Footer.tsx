@@ -15,7 +15,7 @@ const Footer = () => {
       icon: <FaLinkedin className="text-2xl" />,
     },
     {
-      link: "mailto:zhangjohn.ca@gmail.com",
+      link: "mailto:j444zhan@uwaterloo.ca",
       icon: <MdEmail className="text-2xl" />,
     },
   ];
