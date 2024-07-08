@@ -13,10 +13,14 @@ export const navItems = [
   { name: "About", link: "/about" },
   { name: "Experience", link: "/experience" },
   { name: "Projects", link: "/projects" },
+  { name: "Photography", link: "/photography" },
 ];
 
 export const aboutItems = [
-  "I'm a 1st year, computer engineering student at the University of Waterloo, located in Ontario, Canada, and I've been interested in computer systems and software development for the past couple of years. For this summer co-op term, I'm currently working as a UI/UX Designer at FutureVault, a SaaS company located in downtown Toronto. In my off-time, I like to do personal research and indulge in personal projects on web-development, design, embedded systems and artificial intelligence. ",
+  "I'm a 1st year, computer engineering student at the University of Waterloo, located in Ontario, Canada.",
+  "For this summer co-op term, I'm currently working as a UI/UX Designer at FutureVault, a SaaS company located in downtown Toronto.",
+  "I've been interested in computer systems and software development for the past couple of years, and in my off-time, I like to do personal research and indulge in projects on web-development, design, embedded systems and artificial intelligence.",
+  "When I'm not busy with any of the above, I like playing guitar, video games, listening to music, and doing absolutely nothing.",
 ];
 
 export const experienceItems = [{}];

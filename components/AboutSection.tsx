@@ -5,10 +5,14 @@ const AboutSection = () => {
   return (
     <div className="w-full px-[25em] py-10">
       <div className="px-5">
-        <h1 className="text-bold font-semibold text-2xl py-20">
+        <h1 className="text-bold font-semibold text-2xl pt-20 pb-12">
           Welcome to My Website.
         </h1>
-        <p className="">{aboutItems[0]}</p>
+        {aboutItems.map((aboutItem: string, idx: number) => (
+          <p key={`idx`} className="py-1">
+            {aboutItem}
+          </p>
+        ))}
       </div>
     </div>
   );
