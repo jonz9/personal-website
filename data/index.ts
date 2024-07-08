@@ -1,6 +1,7 @@
 import verity from "@/public/assets/projects/verity.png";
 import cryptoket from "@/public/assets/projects/cryptoket.png";
 import tmdbmovies from "@/public/assets/projects/TMDBMovies.png";
+import uvsanitizer from "@/public/assets/projects/uvsanitizer.png";
 
 export const jobTitles = [
   "Software Developer",
@@ -14,7 +15,9 @@ export const navItems = [
   { name: "Projects", link: "/projects" },
 ];
 
-export const aboutItems = [];
+export const aboutItems = [
+  "I'm a 1st year, computer engineering student at the University of Waterloo, located in Ontario, Canada, and I've been interested in computer systems and software development for the past couple of years. For this summer co-op term, I'm currently working as a UI/UX Designer at FutureVault, a SaaS company located in downtown Toronto. In my off-time, I like to do personal research and indulge in personal projects on web-development, design, embedded systems and artificial intelligence. ",
+];
 
 export const experienceItems = [{}];
 
@@ -51,11 +54,11 @@ export const projectItems = [
   {
     name: "Automatic UV Sanitizer",
     subtitle: "Final Design Project for ECE198",
-    link: "",
+    link: "https://uofwaterloo-my.sharepoint.com/:w:/g/personal/oalfayez_uwaterloo_ca/Ec0n0QmRmedKibQU786NN2sBhWpqmjQsxTW6X6RdRm-3vA",
     github: "https://github.com/jonz9/Auto-UV-Sanitizer.git",
     description:
       "UV Sanitizer designed as a solution to combat the high density of bacteria on hospital door handles. Configured peripheral settings using the STM32CubeIDE to output UV rays in automatic intervals, whilst also optimizing energy consumption due to both manual and automatic options",
-    image: "",
+    image: uvsanitizer,
     technologies: ["C", "STM32", "GitLab"],
   },
   {

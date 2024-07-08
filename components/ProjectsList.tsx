@@ -48,8 +48,8 @@ export const ProjectsList = ({
               {projectItem.subtitle}
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4 relative">
-              <div className="absolute inset-0 rounded-xl bg-black backdrop-opacity-0 hover:backdrop-opacity-70 hover:backdrop-blur-sm transition-all duration-300">
-                <p className="px-10 pt-12 pb-5 text-lg italic">
+              <div className="absolute inset-0 rounded-xl bg-white dark:bg-black opacity-0 bg-opacity-70 hover:opacity-100 hover:backdrop-blur-sm transition duration-400">
+                <p className="px-10 pt-12 pb-5 text-lg">
                   {projectItem.description}
                 </p>
                 <div className="px-10">
@@ -57,9 +57,9 @@ export const ProjectsList = ({
                     (tech: string, index: number) => (
                       <button
                         key={index}
-                        className="px-8 py-2 rounded-full relative bg-slate-700 text-white text-sm hover:shadow-2xl hover:shadow-white/[0.1] transition duration-200 border border-slate-600"
+                        className="px-8 py-2 m-1 rounded-full hover:top-1 relative bg-white dark:bg-black text-black dark:text-white text-sm hover:shadow-lg dark:hover:shadow-white/[0.2] hover:shadow-black/[0.2] transition duration-300 border border-slate-600"
                       >
-                        <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl  bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
+                        <div className="absolute inset-x-0 h-px w-1/2 mx-auto -top-px shadow-2xl bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
                         <span className="relative z-20">{tech}</span>
                       </button>
                     )
