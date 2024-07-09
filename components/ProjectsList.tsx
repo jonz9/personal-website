@@ -48,7 +48,7 @@ export const ProjectsList = ({
               {projectItem.subtitle}
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4 relative">
-              <div className="absolute inset-0 rounded-xl bg-white dark:bg-black opacity-0 bg-opacity-70 hover:opacity-100 hover:backdrop-blur-sm transition duration-400">
+              <div className="absolute inset-0 rounded-xl bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-60 opacity-0 hover:opacity-100 hover:backdrop-blur-sm transition duration-400">
                 <p className="px-10 pt-12 pb-5 text-lg">
                   {projectItem.description}
                 </p>

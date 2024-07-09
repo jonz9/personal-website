@@ -26,8 +26,8 @@ export function ThemeSwitcher() {
         defaultSelected
         size="lg"
         color="success"
-        startContent={<SunIcon />}
-        endContent={<MoonIcon />}
+        startContent={<MoonIcon />}
+        endContent={<SunIcon />}
         onChange={handleValueChange}
         disableAnimation={false}
       ></Switch>

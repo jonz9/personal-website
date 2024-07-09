@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <div className="w-full flex justify-between px-[25em] items-center mt-auto pb-20">
       <p className="px-5 text-gray-400">John Zhang © 2024</p>
-      <p className="text-gray-400 italic">made with lots of coffee</p>
+      <p className="text-gray-400 underline">made with lots of coffee</p>
       <div className="grid grid-cols-3 items-center gap-4 px-5">
         {footerItems.map((footerItems: any, idx: number) => (
           <a

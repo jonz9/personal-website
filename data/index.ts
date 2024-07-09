@@ -20,7 +20,11 @@ export const aboutItems = [
   "I'm a 1st year, computer engineering student at the University of Waterloo, located in Ontario, Canada.",
   "For this summer co-op term, I'm currently working as a UI/UX Designer at FutureVault, a SaaS company located in downtown Toronto.",
   "I've been interested in computer systems and software development for the past couple of years, and in my off-time, I like to do personal research and indulge in projects on web-development, design, embedded systems and artificial intelligence.",
-  "When I'm not busy with any of the above, I like playing guitar, video games, listening to music, and doing absolutely nothing.",
+  "When I'm not busy with any of the above, I take my pick of playing guitar, listening to music, playing video games, reading books, or doing absolutely nothing.",
+];
+
+export const updates = [
+  "Learning SpringBoot, Sql, and AWS Cognito. Probably building a photography storage software using those after that before integrating into this website. Deal-fishing for a cam.",
 ];
 
 export const experienceItems = [{}];
