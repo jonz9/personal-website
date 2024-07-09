@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import myPFP from "@/public/assets/images/pfp.JPEG";
+import myPFP from "@/public/assets/images/pfp.png";
 
 const Photo = () => {
   return (

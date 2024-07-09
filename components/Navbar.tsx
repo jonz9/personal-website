@@ -9,6 +9,10 @@ import {
 import Link from "next/link";
 import React, { useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import signatureBlack from "@/public/assets/images/signature-black.png";
+import signatureWhite from "@/public/assets/images/signature-white.png";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export const Navbar = ({
   navItems,
@@ -23,6 +27,7 @@ export const Navbar = ({
   // Hooks
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
+  const { theme, setTheme } = useTheme();
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -65,11 +70,15 @@ export const Navbar = ({
             scroll
             className={cn("relative items-center flex space-x-1 px-5")}
           >
-            <span className="flex flex-row text-3xl !cursor-pointer">
-              <div className="text-neutral-600 dark:hover:text-neutral-300 dark:text-neutral-50 hover:text-neutral-800">
-                John
-              </div>
-              <div className="text-yellow-400">.</div>
+            <span className="flex flex-row text-3xl !cursor-pointer w-10 h-20">
+              <Image
+                src={theme === "dark" ? signatureWhite : signatureBlack}
+                priority
+                quality={100}
+                fill
+                alt="signature"
+                className="object-contain"
+              />
             </span>
           </Link>
 
