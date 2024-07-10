@@ -27,7 +27,29 @@ export const updates = [
   "Learning SpringBoot, Sql, and AWS Cognito. Probably building a photography storage software using those after that before integrating into this website. Deal-fishing for a cam.",
 ];
 
-export const experienceItems = [{}];
+export const experienceData = [
+  {
+    title: "UI/UX Designer",
+    companyName: "FutureVault",
+    icon: "",
+    date: "May 2024 - NOW",
+    points: [""],
+  },
+  {
+    title: "Software Developer",
+    companyName: "UWaterloo BioMechatronics Design Team",
+    icon: "",
+    date: "Sept 2023 - Apr 2024",
+    points: [""],
+  },
+  {
+    title: "Computer Technician Intern",
+    companyName: "reBoot Canada",
+    icon: "",
+    date: "Jun 2022 - Aug 2022",
+    points: [""],
+  },
+];
 
 export const projectItems = [
   {

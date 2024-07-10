@@ -13,6 +13,6 @@
   }
 
   .icon-hover {
-    @apply hover:bg-slate-500 hover:p-0 rounded-xl transition duration-200 ease-in;
+    @apply hover:bg-slate-300 hover:p-0 rounded-xl transition duration-150 ease-in-out;
   }
 }

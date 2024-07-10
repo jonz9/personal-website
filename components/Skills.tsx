@@ -59,8 +59,8 @@ const Skills = () => (
           <FaNode size={40} className="icon-hover" />
           <SiExpress size={40} className="icon-hover" />
           <SiMongodb size={40} className="icon-hover" />
-          <SiJavascript size={40} className="icon-hover" />
           <SiTypescript size={40} className="icon-hover" />
+          <SiJavascript size={40} className="icon-hover" />
           <IoLogoFirebase size={40} className="icon-hover" />
           <FaAws size={40} className="icon-hover" />
         </span>

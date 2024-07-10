@@ -7,7 +7,7 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import signatureBlack from "@/public/assets/images/signature-black.png";
 import signatureWhite from "@/public/assets/images/signature-white.png";
@@ -27,7 +27,10 @@ export const Navbar = ({
   // Hooks
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  let signatureSrc = signatureBlack;
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -45,6 +48,14 @@ export const Navbar = ({
       }
     }
   });
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  signatureSrc = theme === "light" ? signatureBlack : signatureWhite;
 
   return (
     <div className="w-full px-[25em]">
@@ -72,12 +83,12 @@ export const Navbar = ({
           >
             <span className="flex flex-row text-3xl !cursor-pointer w-10 h-20">
               <Image
-                src={theme === "dark" ? signatureWhite : signatureBlack}
+                src={signatureSrc}
                 priority
                 quality={100}
                 fill
                 alt="signature"
-                className="object-contain"
+                className="object-contain ml-2"
               />
             </span>
           </Link>
