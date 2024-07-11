@@ -32,6 +32,7 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
           />
         </div>
       }
+      visible={true}
     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
@@ -64,7 +65,7 @@ const ExperienceTimeline = ({
 }) => {
   return (
     <div className="flex flex-col w-full px-[25em]">
-      <VerticalTimeline className="px-5">
+      <VerticalTimeline className="px-5" animate={false}>
         {experienceItems.map((experience, index) => (
           <ExperienceCard key={`experience-${index}`} experience={experience} />
         ))}

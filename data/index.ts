@@ -11,7 +11,7 @@ export const jobTitles = [
 
 export const navItems = [
   { name: "About", link: "/about" },
-  { name: "Experience", link: "/experience" },
+  // { name: "Experience", link: "/experience" },
   { name: "Projects", link: "/projects" },
   { name: "Photography", link: "/photography" },
 ];
@@ -104,17 +104,11 @@ export const projectItems = [
   {
     name: "This Website",
     subtitle: "A site designed and built to show who I am as a student",
-    link: "",
+    link: "/",
     github: "https://github.com/jonz9/personal-website.git",
     description:
-      "Shows the experiences I have, the type of learner I am, and the skills I have accumulated over numerous opportunities. This site will continue to throughout my career as an engineer!",
+      "Shows the experiences I have, the type of learner I am, and the skills I have accumulated over numerous opportunities. This site will continue to update throughout my career as an engineer.",
     image: "",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "Aceternity UI",
-      "Sentry",
-    ],
+    technologies: ["Next.js", "TypeScript", "Tailwind", "Sentry"],
   },
 ];

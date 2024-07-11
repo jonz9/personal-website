@@ -8,8 +8,18 @@ import Photo from "./Photo";
 import { jobTitles } from "@/data";
 import { LinkPreview } from "@/components/ui/link-preview";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { FaDownload } from "react-icons/fa";
+import { SiDevpost } from "react-icons/si";
+import Link from "next/link";
 
 const Hero = () => {
+  const saveResume = () => {
+    saveAs(
+      "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+      "example.pdf"
+    );
+  };
+
   return (
     <div className="pb-60 pt-36 px-[25em]">
       <Spotlight className="left-20 top-10 h-[60vh] w-[100vw]" fill="black" />
@@ -20,7 +30,7 @@ const Hero = () => {
 
         {/* Main Hero Section of Text and Photo */}
         <div className="grid grid-cols-3 gap-4 z-100">
-          <div className="col-span-2 p-4 items-left">
+          <div className="col-span-2 p-2 items-center">
             {/* Name and Job */}
             <FlipWords
               words={jobTitles}
@@ -31,7 +41,7 @@ const Hero = () => {
             </p>
 
             {/* Brief About */}
-            <div className="py-2 flex flex-col">
+            <div className="pt-2 flex flex-col">
               <div className="flex">
                 <p className="text-2xl font-semibold relative">
                   I'm currently studying at the
@@ -43,21 +53,39 @@ const Hero = () => {
                   University of Waterloo
                 </LinkPreview>
               </div>
-              {/* <div className="flex justify-center items-center">
-                <HoverBorderGradient
-                  containerClassName="rounded-3xl"
-                  as={button}
-                  className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            </div>
+
+            {/* Resume and Devpost */}
+            <div className="flex items-center py-4 space-x-4">
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                onClick={saveResume}
+              >
+                <FaDownload />
+                <span>Resume</span>
+              </HoverBorderGradient>
+              <HoverBorderGradient
+                containerClassName="rounded-full"
+                as="button"
+                className="dark:bg-black bg-white text-black dark:text-white"
+              >
+                <Link
+                  href={
+                    "https://devpost.com/zhangjohn-ca?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
+                  }
+                  className="flex justify-center items-center space-x-2"
                 >
-                  Download Resume
-                  <h1>hello testing</h1>
-                </HoverBorderGradient>
-              </div> */}
+                  <SiDevpost />
+                  <span>Devpost</span>
+                </Link>
+              </HoverBorderGradient>
             </div>
           </div>
 
           {/* Photo */}
-          <div className="order-1 xl:order-non mb-8 xl:mb-0">
+          <div className="col-span-1 order-1 xl:order-non mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
@@ -67,3 +95,6 @@ const Hero = () => {
 };
 
 export default Hero;
+function saveAs(arg0: string, arg1: string) {
+  throw new Error("Function not implemented.");
+}
