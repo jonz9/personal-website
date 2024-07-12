@@ -2,6 +2,7 @@ import verity from "@/public/assets/projects/verity.png";
 import cryptoket from "@/public/assets/projects/cryptoket.png";
 import tmdbmovies from "@/public/assets/projects/TMDBMovies.png";
 import uvsanitizer from "@/public/assets/projects/uvsanitizer.png";
+import thissite from "@/public/assets/projects/this-site.png";
 
 export const jobTitles = [
   "Software Developer",
@@ -108,7 +109,7 @@ export const projectItems = [
     github: "https://github.com/jonz9/personal-website.git",
     description:
       "Shows the experiences I have, the type of learner I am, and the skills I have accumulated over numerous opportunities. This site will continue to update throughout my career as an engineer.",
-    image: "",
+    image: thissite,
     technologies: ["Next.js", "TypeScript", "Tailwind", "Sentry"],
   },
 ];

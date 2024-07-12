@@ -11,18 +11,20 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { FaDownload } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const Hero = () => {
+  const { theme } = useTheme();
+
   const saveResume = () => {
-    saveAs(
-      "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-      "example.pdf"
-    );
+    saveAs("/public/assets/John-Zhang-Resume.pdf", "John-Zhang-Resume.pdf");
   };
 
   return (
     <div className="pb-60 pt-36 px-[25em]">
-      <Spotlight className="left-20 top-10 h-[60vh] w-[100vw]" fill="black" />
+      {theme === "dark" ? (
+        <Spotlight className="left-50 top-0 h-[40vh] w-[100vw]" fill="white" />
+      ) : null}
 
       {/* dot background */}
       <div className="h-full w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center">
