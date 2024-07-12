@@ -20,14 +20,17 @@ export function ThemeSwitcher() {
     setTheme(theme === "light" ? "dark" : "light");
   }
 
+  let startIcon = theme === "light" ? <SunIcon /> : <MoonIcon />;
+  let endIcon = theme === "dark" ? <MoonIcon /> : <SunIcon />;
+
   return (
     <div className="z-20">
       <Switch
         defaultSelected
         size="lg"
         color="success"
-        startContent={<MoonIcon />}
-        endContent={<SunIcon />}
+        startContent={startIcon}
+        endContent={endIcon}
         onChange={handleValueChange}
         disableAnimation={false}
       ></Switch>

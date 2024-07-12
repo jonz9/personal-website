@@ -81,7 +81,7 @@ export const Navbar = ({
             scroll
             className={cn("relative items-center flex space-x-1 px-5")}
           >
-            <span className="flex flex-row text-3xl !cursor-pointer w-10 h-20">
+            <span className="flex flex-row text-3xl relative !cursor-pointer w-20 h-20">
               <Image
                 src={signatureSrc}
                 priority

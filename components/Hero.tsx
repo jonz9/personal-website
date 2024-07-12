@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { FlipWords } from "./ui/flip-words";
 import Photo from "./Photo";
@@ -12,13 +12,26 @@ import { FaDownload } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+// import saveAs from "file-saver";
 
 const Hero = () => {
   const { theme } = useTheme();
 
-  const saveResume = () => {
-    saveAs("/public/assets/John-Zhang-Resume.pdf", "John-Zhang-Resume.pdf");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // const saveResume = () => {
+  //   saveAs("/public/assets/John-Zhang-Resume.pdf", "John-Zhang-Resume.pdf");
+  // };
+
+  const handleNewTab = () => {
+    window.open("/assets/John-Zhang-Resume.pdf", "_blank");
   };
+
+  if (!mounted) return null;
 
   return (
     <div className="pb-60 pt-36 px-[25em]">
@@ -63,7 +76,7 @@ const Hero = () => {
                 containerClassName="rounded-full"
                 as="button"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-                onClick={saveResume}
+                onClick={handleNewTab}
               >
                 <FaDownload />
                 <span>Resume</span>
@@ -77,6 +90,7 @@ const Hero = () => {
                   href={
                     "https://devpost.com/zhangjohn-ca?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav"
                   }
+                  target="_blank"
                   className="flex justify-center items-center space-x-2"
                 >
                   <SiDevpost />
@@ -97,6 +111,3 @@ const Hero = () => {
 };
 
 export default Hero;
-function saveAs(arg0: string, arg1: string) {
-  throw new Error("Function not implemented.");
-}
