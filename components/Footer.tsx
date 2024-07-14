@@ -3,9 +3,19 @@ import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { IoIosDocument } from "react-icons/io";
+import { SiDevpost } from "react-icons/si";
 
 const Footer = () => {
   const footerItems = [
+    {
+      link: "/public/assets/John-Zhang-Resume.pdf",
+      icon: <IoIosDocument className="text-2xl" />,
+    },
+    {
+      link: "https://devpost.com/zhangjohn-ca?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav",
+      icon: <SiDevpost className="text-2xl" />,
+    },
     {
       link: "https://github.com/jonz9",
       icon: <FaGithub className="text-2xl" />,
@@ -19,22 +29,36 @@ const Footer = () => {
       icon: <MdEmail className="text-2xl" />,
     },
   ];
-  {
-    /* <span className="flex justify-between items-center border-t-1 border-t-black dark:border-t-white"> */
-  }
+
+  const footerHalf = footerItems.slice(-3);
 
   return (
-    <div className="w-full flex justify-between px-[25em] items-center mt-auto pb-20">
-      <p className="px-5 text-gray-400">John Zhang © 2024</p>
-      <p className="text-gray-400 underline">made with lots of coffee</p>
-      <div className="grid grid-cols-3 items-center gap-4 px-5">
+    <div className="w-full flex flex-col md:flex-row justify-between items-center mt-auto p-4 space-y-2 md:space-y-0">
+      <p className="text-gray-400 text-sm md:text-base">John Zhang © 2024</p>
+      <p className="text-gray-400 underline text-sm md:text-base">
+        made with lots of coffee
+      </p>
+      <div className="items-center gap-4 hidden md:flex">
+        {footerHalf.map((footerHalf: any, idx: number) => (
+          <a
+            key={`link=${idx}`}
+            href={footerHalf.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 rounded-md hover:bg-yellow-500 transition duration-350"
+          >
+            {footerHalf.icon}
+          </a>
+        ))}
+      </div>
+      <div className="flex items-center gap-4 md:hidden flex-wrap">
         {footerItems.map((footerItems: any, idx: number) => (
           <a
             key={`link=${idx}`}
             href={footerItems.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-1 bg-slate-200 hover:bg-slate-300 dark:bg-slate-600 border-1 hover:dark:bg-slate-500 dark:border-slate-500 rounded-md"
+            className="p-1 rounded-md"
           >
             {footerItems.icon}
           </a>

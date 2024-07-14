@@ -34,7 +34,7 @@ const Hero = () => {
   if (!mounted) return null;
 
   return (
-    <div className="pb-60 pt-36 px-[25em]">
+    <div className="pb-24 sm:pb-16 md:pb-36 xl:pb-60 pt-16 md:pt-36">
       {theme === "dark" ? (
         <Spotlight className="left-50 top-0 h-[40vh] w-[100vw]" fill="white" />
       ) : null}
@@ -44,26 +44,26 @@ const Hero = () => {
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
         {/* Main Hero Section of Text and Photo */}
-        <div className="grid grid-cols-3 gap-4 z-100">
-          <div className="col-span-2 p-2 items-center">
+        <div className="grid grid-rows-auto md:grid-rows-none md:grid-cols-3 lg:gap-4 z-100 items-center">
+          <div className="md:col-span-2 text-center md:text-left order-10 md:order-1">
             {/* Name and Job */}
             <FlipWords
               words={jobTitles}
-              className="text-3xl font-medium text-yellow-500"
+              className="text-2xl lg:text-3xl font-medium text-yellow-500"
             />
-            <p className="text-8xl font-bold relative bg-clip-text bg-gradient-to-b from-gray-800 to-gray-950">
+            <p className="text-5xl sm:text-7xl lg:text-8xl font-bold relative bg-clip-text bg-gradient-to-b from-gray-800 to-gray-950">
               Hey! I'm John.
             </p>
 
             {/* Brief About */}
             <div className="pt-2 flex flex-col">
-              <div className="flex">
-                <p className="text-2xl font-semibold relative">
+              <div className="lg:flex">
+                <p className="text-lg md:text-2xl font-semibold relative">
                   I'm currently studying at the
                 </p>
                 <LinkPreview
                   url="https://uwaterloo.ca/engineering"
-                  className="px-1 text-2xl font-semibold relative italic hover:underline color-transition"
+                  className="px-1 text-lg md:text-2xl underline md:no-underline font-semibold relative italic hover:underline color-transition"
                 >
                   University of Waterloo
                 </LinkPreview>
@@ -71,7 +71,7 @@ const Hero = () => {
             </div>
 
             {/* Resume and Devpost */}
-            <div className="flex items-center py-4 space-x-4">
+            <div className="items-center py-4 space-x-4 justify-center md:justify-start hidden md:flex">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
@@ -101,7 +101,7 @@ const Hero = () => {
           </div>
 
           {/* Photo */}
-          <div className="col-span-1 order-1 xl:order-non mb-8 xl:mb-0">
+          <div className="row-span-1 md:col-span-1 order-1 xl:order-non mb-12 xl:mb-0 h-auto">
             <Photo />
           </div>
         </div>

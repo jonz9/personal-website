@@ -23,20 +23,20 @@ export const ProjectsList = ({
   projectItems: ProjectItem[];
 }) => {
   return (
-    <div className="w-full flex flex-col justify-between px-[25em] pt-5 pb-20 items-center">
+    <div className="w-full flex flex-col justify-between pt-5 pb-20 items-center">
       {projectItems.map((projectItem, idx) => (
         <CardContainer
           key={`item=${idx}`}
           className="inter-var w-full max-w-full"
-          containerClassName="w-full max-w-full px-5"
+          containerClassName="w-full max-w-full"
         >
           <CardBody
-            className="bg-gray-200 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] hover:shadow-2xl hover:shadow-black-500/[0.2] dark:bg-black dark:border-white/[0.2] border-black/[0.2] w-full rounded-xl p-6 border transition duration-300"
+            className="bg-gray-200 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] hover:shadow-2xl hover:shadow-black-500/[0.2] dark:bg-black dark:border-white/[0.2] border-black/[0.2] w-full rounded-xl p-4 md:p-6 border transition duration-300"
             height={"auto"}
           >
             <CardItem
               translateZ="50"
-              className="text-xl font-bold text-neutral-600 dark:text-white"
+              className="text-lg md:text-xl font-bold text-neutral-600 dark:text-white"
             >
               {projectItem.name}
             </CardItem>
@@ -48,8 +48,8 @@ export const ProjectsList = ({
               {projectItem.subtitle}
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4 relative">
-              <div className="absolute inset-0 rounded-xl bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-60 opacity-0 hover:opacity-100 hover:backdrop-blur-sm transition duration-400">
-                <p className="px-10 pt-12 pb-5 text-lg">
+              <div className="absolute hidden lg:block inset-0 rounded-xl bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-60 opacity-0 hover:opacity-100 hover:backdrop-blur-sm transition duration-400">
+                <p className="px-5 lg:px-8 xl:px-10 pt-3 md:pt-8 lg:pt-12 pb-5 md:text-lg">
                   {projectItem.description}
                 </p>
                 <div className="px-10">
@@ -74,7 +74,7 @@ export const ProjectsList = ({
                 alt="thumbnail"
               />
             </CardItem>
-            <div className="flex justify-between items-center mt-20">
+            <div className="flex justify-between items-center mt-5 md:mt-20">
               <CardItem
                 translateZ={20}
                 as={Link}
