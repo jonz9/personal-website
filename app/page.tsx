@@ -7,13 +7,15 @@ import React from "react";
 
 const Home = () => {
   return (
-    <main className="relative overflow-hidden justify-items-stretch mx-auto items-center flex flex-col min-h-screen px-5 2xl:px-[15em]">
-      <PageTransition>
+    <PageTransition>
+      <main className="relative overflow-hidden flex flex-col justify-between min-h-screen px-5 2xl:px-[20em]">
         <Navbar navItems={navItems} className="text-black" />
-        <Hero />
+        <div className="flex-grow flex items-center justify-center">
+          <Hero />
+        </div>
         <Footer />
-      </PageTransition>
-    </main>
+      </main>
+    </PageTransition>
   );
 };
 

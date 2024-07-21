@@ -7,7 +7,7 @@ import PageTransition from "@/components/PageTransition";
 
 const Photography = () => {
   return (
-    <main className="relative overflow-hidden justify-items-stretch mx-auto items-center flex flex-col min-h-screen px-5 2xl:px-[25em]">
+    <main className="relative overflow-hidden justify-items-stretch mx-auto items-center flex flex-col min-h-screen px-5 2xl:px-[20em]">
       <Navbar navItems={navItems} className="text-black" />
       {/* <PageTransition> */}
       <PhotosGrid />

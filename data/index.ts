@@ -20,8 +20,10 @@ export const navItems = [
 export const aboutItems = [
   "I'm a 1st year, computer engineering student at the University of Waterloo, located in Ontario, Canada.",
   "For this summer co-op term, I'm currently working as a UI/UX Designer at FutureVault, a SaaS company located in downtown Toronto.",
+  "Interested in computer systems and software development, I'm excited to learn from those around me and take on opportunities head-on.",
   "I've been interested in computer systems and software development for the past couple of years, and in my off-time, I like to do personal research and indulge in projects on web-development, design, embedded systems and artificial intelligence.",
-  "When I'm not busy with any of the above, I take my pick of playing guitar, listening to music, playing video games, reading books, or doing absolutely nothing.",
+  "I strive to apply my knowledge in the real world by taking  ",
+  "When I'm not busy with any of the above, I take my pick of playing guitar, listening to music, playing video games, or reading books.",
 ];
 
 export const updates = [
@@ -56,7 +58,7 @@ export const projectItems = [
   {
     name: "Verity",
     subtitle: "Charity Management System { BlockHacks 2024 }",
-    link: "https://charity-management-system-akle-oy44kixsg.vercel.app/",
+    link: "https://charity-management-system-akle.vercel.app/",
     github: "https://github.com/jonz9/Charity-Management-System",
     description:
       "Management database and server, integrated with blockchain technology to aid charities in achieving transparent donations and tracked destination. The system registrate charities that apply onto the database and will push transations/donations onto the blockchain using the Astrokode IDE.",
@@ -75,7 +77,7 @@ export const projectItems = [
   {
     name: "CryptoKet",
     subtitle: "Concurrent cryptocurrency tracking website",
-    link: "https://crypto-ket-git-main-johns-projects-3415155d.vercel.app/",
+    link: "https://crypto-ket-johns-projects-3415155d.vercel.app/",
     github: "https://github.com/jonz9/CryptoKet",
     description:
       "Designed with the CoinGecko API to manipulate current cryptocurrency data such as price, trading volume, and synchronous growth, along with IAM management",
@@ -85,7 +87,7 @@ export const projectItems = [
   {
     name: "Automatic UV Sanitizer",
     subtitle: "Final Design Project for ECE198",
-    link: "https://uofwaterloo-my.sharepoint.com/:w:/g/personal/oalfayez_uwaterloo_ca/Ec0n0QmRmedKibQU786NN2sBhWpqmjQsxTW6X6RdRm-3vA",
+    link: "https://drive.google.com/file/d/1gk1BDBBo0buBlnHNTibTfT1PPigvsSfO/view?usp=sharing",
     github: "https://github.com/jonz9/Auto-UV-Sanitizer.git",
     description:
       "UV Sanitizer designed as a solution to combat the high density of bacteria on hospital door handles. Configured peripheral settings using the STM32CubeIDE to output UV rays in automatic intervals, whilst also optimizing energy consumption due to both manual and automatic options",

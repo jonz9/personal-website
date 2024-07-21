@@ -23,10 +23,6 @@ const Hero = () => {
     setMounted(true);
   }, []);
 
-  // const saveResume = () => {
-  //   saveAs("/public/assets/John-Zhang-Resume.pdf", "John-Zhang-Resume.pdf");
-  // };
-
   const handleNewTab = () => {
     window.open("/assets/John-Zhang-Resume.pdf", "_blank");
   };
@@ -34,7 +30,8 @@ const Hero = () => {
   if (!mounted) return null;
 
   return (
-    <div className="pb-24 sm:pb-16 md:pb-36 xl:pb-60 pt-16 md:pt-36">
+    // <div className="pb-24 sm:pb-16 md:pb-36 xl:pb-60 pt-16 md:pt-36"></div>
+    <div className="">
       {theme === "dark" ? (
         <Spotlight className="left-50 top-0 h-[40vh] w-[100vw]" fill="white" />
       ) : null}
@@ -49,21 +46,21 @@ const Hero = () => {
             {/* Name and Job */}
             <FlipWords
               words={jobTitles}
-              className="text-2xl lg:text-3xl font-medium text-yellow-500"
+              className="text-2xl font-medium text-yellow-500"
             />
-            <p className="text-5xl sm:text-7xl lg:text-8xl font-bold relative bg-clip-text bg-gradient-to-b from-gray-800 to-gray-950">
+            <p className="text-5xl sm:text-[5.2em] font-bold relative bg-clip-text bg-gradient-to-b from-gray-800 to-gray-950">
               Hey! I'm John.
             </p>
 
             {/* Brief About */}
             <div className="pt-2 flex flex-col">
               <div className="lg:flex">
-                <p className="text-lg md:text-2xl font-semibold relative">
+                <p className="text-lg md:text-2xl lg:text-xl font-semibold relative">
                   I'm currently studying at the
                 </p>
                 <LinkPreview
                   url="https://uwaterloo.ca/engineering"
-                  className="px-1 text-lg md:text-2xl underline md:no-underline font-semibold relative italic hover:underline color-transition"
+                  className="px-1 text-lg md:text-2xl lg:text-xl underline md:no-underline font-semibold relative italic hover:underline color-transition"
                 >
                   University of Waterloo
                 </LinkPreview>
@@ -71,7 +68,7 @@ const Hero = () => {
             </div>
 
             {/* Resume and Devpost */}
-            <div className="items-center py-4 space-x-4 justify-center md:justify-start hidden md:flex">
+            <div className="items-center py-2 space-x-2 justify-center md:justify-start hidden md:flex">
               <HoverBorderGradient
                 containerClassName="rounded-full"
                 as="button"
