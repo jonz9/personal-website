@@ -12,9 +12,8 @@ import { FaDownload } from "react-icons/fa";
 import { SiDevpost } from "react-icons/si";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-// import saveAs from "file-saver";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   const { theme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
