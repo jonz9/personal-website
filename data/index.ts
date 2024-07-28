@@ -22,7 +22,6 @@ export const aboutItems = [
   "For this summer co-op term, I'm currently working as a UI/UX Designer at FutureVault, a SaaS company located in downtown Toronto.",
   "Interested in computer systems and software development, I'm excited to learn from those around me and take on opportunities head-on.",
   "I've been interested in computer systems and software development for the past couple of years, and in my off-time, I like to do personal research and indulge in projects on web-development, design, embedded systems and artificial intelligence.",
-  "I strive to apply my knowledge in the real world by taking  ",
   "When I'm not busy with any of the above, I take my pick of playing guitar, listening to music, playing video games, or reading books.",
 ];
 
