@@ -12,7 +12,7 @@ export const jobTitles = [
 
 export const navItems = [
   { name: "About", link: "/about" },
-  // { name: "Experience", link: "/experience" },
+  { name: "Experience", link: "/experience" },
   { name: "Projects", link: "/projects" },
   { name: "Photography", link: "/photography" },
 ];
@@ -25,30 +25,36 @@ export const aboutItems = [
 ];
 
 export const updates = [
-  "Learning SpringBoot, Sql, and AWS Cognito. Probably building a photography storage software using those after that before integrating into this website. Deal-fishing for a cam.",
+  "Learning more about embedded software and computer vision.",
 ];
 
 export const experienceData = [
   {
     title: "UI/UX Designer",
     companyName: "FutureVault",
-    icon: "",
     date: "May 2024 - NOW",
-    points: [""],
+    content: [
+      "Collaborated with cross-functional teams to align on project goals and design deliverables, building prototypes that reduced project turnaround time by 10%",
+      "Created wireframes, mockups, and interactive prototypes using Figma, Illustrator, and Adobe XD to visualize design concepts and user interaction flows",
+    ],
   },
   {
     title: "Software Developer",
-    companyName: "UWaterloo BioMechatronics Design Team",
-    icon: "",
+    companyName: "UW BioMechatronics Team",
     date: "Sept 2023 - Apr 2024",
-    points: [""],
+    content: [
+      "Configured ESP32 client-side program for data transfer over BLE Wi-Fi communication and improved program build time by 7%",
+      "Enhanced EMG sensor feedback in terminal display by debugging and documenting data variables, improving usability and performance",
+    ],
   },
   {
     title: "Computer Technician Intern",
     companyName: "reBoot Canada",
-    icon: "",
     date: "Jun 2022 - Aug 2022",
-    points: [""],
+    content: [
+      "Assisted the reBoot team with online sales by confirming purchases and shipping out 100+ products",
+      "Repaired and refurbished 200+ laptops / PCs to ensure they were up to store standards",
+    ],
   },
 ];
 

@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
   }, []);
 
   const handleNewTab = () => {
-    window.open("/assets/John-Zhang-Resume.pdf", "_blank");
+    window.open("/public/assets/John-Zhang-Resume.pdf", "_blank");
   };
 
   if (!mounted) return null;
@@ -32,7 +32,10 @@ const Hero: React.FC = () => {
     // <div className="pb-24 sm:pb-16 md:pb-36 xl:pb-60 pt-16 md:pt-36"></div>
     <div className="">
       {theme === "dark" ? (
-        <Spotlight className="left-50 top-0 h-[40vh] w-[100vw]" fill="white" />
+        <Spotlight
+          className="left-[20em] top-0 h-[40vh] w-[100vw]"
+          fill="white"
+        />
       ) : null}
 
       {/* dot background */}
