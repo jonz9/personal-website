@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { ParallaxScroll } from "./ui/parallax-scroll";
 import getPhotos from "server/s3";
@@ -28,14 +30,14 @@ const PhotosGrid = () => {
 
   if (photos.length == 0) {
     return (
-      <div>
-        <h2>Currently No Photos Available! Will be there soon!</h2>
+      <div className="flex flex-col justify-center items-center">
+        <h2 className="py-56">Incoming... :)</h2>
       </div>
     );
   }
 
   return (
-    <div className="w-full h-full relative flex justify-center items-center py-20 space-x-2">
+    <div className="w-full min-h-screen relative flex justify-center items-center space-x-2 flex-col">
       <ParallaxScroll photos={photos} className="" />
     </div>
   );

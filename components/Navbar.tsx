@@ -138,7 +138,7 @@ export const Navbar = ({
           </div>
 
           {/* Right Side Navigation for Desktop */}
-          <div className="hidden md:flex justify-center items-center space-x-4">
+          <div className="hidden md:flex justify-center items-center space-x-2">
             {navItems.map((navItem: any, idx: number) => (
               <Link
                 key={`link=${idx}`}

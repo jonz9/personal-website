@@ -3,6 +3,7 @@ import cryptoket from "@/public/assets/projects/cryptoket.png";
 import tmdbmovies from "@/public/assets/projects/TMDBMovies.png";
 import uvsanitizer from "@/public/assets/projects/uvsanitizer.png";
 import thissite from "@/public/assets/projects/this-site.png";
+import inprogress from "@/public/assets/projects/workinprogress.png";
 
 export const jobTitles = [
   "Software Developer",
@@ -32,9 +33,9 @@ export const experienceData = [
   {
     title: "UI/UX Designer",
     companyName: "FutureVault",
-    date: "May 2024 - NOW",
+    date: "May 2024 - August 2024",
     content: [
-      "Collaborated with cross-functional teams to align on project goals and design deliverables, building prototypes that reduced project turnaround time by 10%",
+      "Collaborated with cross-functional teams to align on project goals, conduct client research, run usability testing, and build scalable product features that highlight user needs and avoids pain points",
       "Created wireframes, mockups, and interactive prototypes using Figma, Illustrator, and Adobe XD to visualize design concepts and user interaction flows",
     ],
   },
@@ -60,8 +61,28 @@ export const experienceData = [
 
 export const projectItems = [
   {
+    name: "Shot",
+    subtitle: "Automatic Portolio Management for Photographers",
+    link: "https://github.com/jonz9/Portfolio-Management-System",
+    github: "https://github.com/jonz9/Portfolio-Management-System",
+    description:
+      "Shot is a photo management platform that enables photographers to upload, organize, and categorize images automatically through S3 buckets and an image classifer ML model. Built with an authorization feature using Cognito and a backend server using S3 and node, photos can be organized seamlessly into a user's account under automatically classified categories.",
+    image: inprogress,
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "Cognito",
+      "S3",
+      "Tailwind",
+      "OpenCV",
+      "Python",
+    ],
+  },
+  {
     name: "Verity",
-    subtitle: "Charity Management System { BlockHacks 2024 }",
+    subtitle: "Charity Management System { BlockHacks 2024 Winner }",
     link: "https://charity-management-system-akle.vercel.app/",
     github: "https://github.com/jonz9/Charity-Management-System",
     description:
@@ -80,7 +101,7 @@ export const projectItems = [
   },
   {
     name: "CryptoKet",
-    subtitle: "Concurrent cryptocurrency tracking website",
+    subtitle: "Concurrent Cryptocurrency Tracking Website",
     link: "https://crypto-ket-johns-projects-3415155d.vercel.app/",
     github: "https://github.com/jonz9/CryptoKet",
     description:
