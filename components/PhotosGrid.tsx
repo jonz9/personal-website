@@ -5,29 +5,11 @@ import { ParallaxScroll } from "./ui/parallax-scroll";
 import getPhotos from "server/s3";
 import { useState, useEffect } from "react";
 
-const PhotosGrid = () => {
-  const [photos, setPhotos] = useState([]);
-  const [loading, setLoading] = useState(true);
+interface PhotosGridProps {
+  photos: string[];
+}
 
-  useEffect(() => {
-    const fetchPhotos = async () => {
-      try {
-        const photoURLs = await getPhotos();
-        setPhotos(photoURLs);
-        setLoading(false);
-      } catch (err) {
-        console.error("Error fetching photos: ", err);
-        setLoading(false);
-      }
-    };
-
-    fetchPhotos();
-  }, []);
-
-  if (loading) {
-    return <div></div>;
-  }
-
+const PhotosGrid: React.FC<PhotosGridProps> = ({ photos }) => {
   if (photos.length == 0) {
     return (
       <div className="flex flex-col justify-center items-center">
