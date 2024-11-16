@@ -47,18 +47,10 @@ const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white ">
           My Experiences Over the Past Few Years
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base flex">
-          If you want to learn more, feel free to hit me up for a chat, check
-          out my&nbsp;
-          <div className="underline cursor-pointer">
-            <a href="https://www.linkedin.com/in/john-zhang-2665b9236/">
-              Linkedin
-            </a>
-          </div>
-          &nbsp;or my&nbsp;
-          <div className="underline cursor-pointer" onClick={handleNewTab}>
-            Resume
-          </div>
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
+          A summary of what I've learned, attained and accomplished through
+          various opportunities. A foundational base of my skillset that I use
+          to tackle current and future problems.
         </p>
       </div>
 

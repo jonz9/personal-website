@@ -110,31 +110,33 @@ export const Navbar = ({
           {/* Sidebar */}
           <div
             className={cn(
-              "fixed top-0 right-0 h-full bg-white dark:bg-black transition-transform transform w-60",
+              "fixed top-0 right-0 h-full bg-white dark:bg-black transition-transform transform w-40",
               sidebarOpen ? "translate-x-0" : "translate-x-full",
               "md:hidden flex flex-col items-center justify-center space-y-4 p-4 z-40" // Ensure the sidebar is above other elements
             )}
           >
             {/* Close button inside sidebar */}
             <button
-              className="text-2xl focus:outline-none self-start mb-4 absolute top-12 left-8"
+              className="text-2xl focus:outline-none self-start mb-4 absolute top-12 left-28"
               onClick={toggleSidebar}
             >
               <FaTimes />
             </button>
-            {navItems.map((navItem: any, idx: number) => (
-              <Link
-                key={`link=${idx}`}
-                href={navItem.link}
-                scroll
-                className={cn(
-                  "relative dark:text-neutral-50 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 text-lg"
-                )}
-              >
-                {navItem.name}
-              </Link>
-            ))}
-            <ThemeSwitcher />
+            <div className=" flex flex-col items-end space-y-4">
+              {navItems.map((navItem: any, idx: number) => (
+                <Link
+                  key={`link=${idx}`}
+                  href={navItem.link}
+                  scroll
+                  className={cn(
+                    "relative dark:text-neutral-50 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 text-lg"
+                  )}
+                >
+                  {navItem.name}
+                </Link>
+              ))}
+              <ThemeSwitcher />
+            </div>
           </div>
 
           {/* Right Side Navigation for Desktop */}
