@@ -64,7 +64,7 @@ export const Navbar = ({
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <AnimatePresence mode="wait">
         <motion.div
           initial={{
@@ -94,14 +94,14 @@ export const Navbar = ({
                 quality={100}
                 fill
                 alt="signature"
-                className="object-contain"
+                className="object-contain ml-4 md:ml-0"
               />
             </span>
           </Link>
 
           {/* Menu Toggle Button for Mobile */}
           <button
-            className="md:hidden text-2xl focus:outline-none z-50" // Ensure the toggle button is above other elements
+            className="md:hidden text-2xl pr-8 focus:outline-none z-50" // Ensure the toggle button is above other elements
             onClick={toggleSidebar}
           >
             {sidebarOpen ? null : <FaBars />}
@@ -110,19 +110,19 @@ export const Navbar = ({
           {/* Sidebar */}
           <div
             className={cn(
-              "fixed top-0 right-0 h-full bg-white dark:bg-black transition-transform transform w-40",
+              "absolute top-0 right-0 h-screen bg-white dark:bg-black transition-transform transform w-40",
               sidebarOpen ? "translate-x-0" : "translate-x-full",
-              "md:hidden flex flex-col items-center justify-center space-y-4 p-4 z-40" // Ensure the sidebar is above other elements
+              "md:hidden flex flex-col space-y-4 p-4 z-100" // Increased z-index to be in front
             )}
           >
             {/* Close button inside sidebar */}
             <button
-              className="text-2xl focus:outline-none self-start mb-4 absolute top-12 left-28"
+              className="text-2xl focus:outline-none self-start mb-4 absolute top-12 left-28 z-[9999]"
               onClick={toggleSidebar}
             >
               <FaTimes />
             </button>
-            <div className=" flex flex-col items-end space-y-4">
+            <div className="flex flex-col items-end justify-start h-full space-y-4 pt-16">
               {navItems.map((navItem: any, idx: number) => (
                 <Link
                   key={`link=${idx}`}

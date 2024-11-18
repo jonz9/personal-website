@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <PageTransition>
       <main className="relative overflow-hidden flex flex-col justify-between min-h-screen px-5 2xl:px-[20em]">
-        <Navbar navItems={navItems} className="text-black" />
-        <div className="flex-grow flex items-center justify-center">
+        <Navbar navItems={navItems} className="text-black absolute z-50" />
+        <div className="flex-grow flex items-center justify-center z-10 relative">
           <Hero />
         </div>
         <Footer />
