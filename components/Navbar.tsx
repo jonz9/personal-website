@@ -17,7 +17,6 @@ import { FaBars, FaTimes } from "react-icons/fa"; // Import icons for the menu t
 
 export const Navbar = ({
   navItems,
-  className,
 }: {
   navItems: {
     name: string;
@@ -64,7 +63,7 @@ export const Navbar = ({
   };
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative dark:text-white text-black z-[200] md:px-10">
       <AnimatePresence mode="wait">
         <motion.div
           initial={{
@@ -94,7 +93,7 @@ export const Navbar = ({
                 quality={100}
                 fill
                 alt="signature"
-                className="object-contain ml-4 md:ml-0"
+                className="object-contain ml-6 md:ml-0"
               />
             </span>
           </Link>
@@ -110,7 +109,7 @@ export const Navbar = ({
           {/* Sidebar */}
           <div
             className={cn(
-              "absolute top-0 right-0 h-screen bg-white dark:bg-black transition-transform transform w-40",
+              "absolute top-0 right-0 min-h-screen h-full bg-white dark:bg-black border-gray-500 border-l-1 transition-transform transform w-40",
               sidebarOpen ? "translate-x-0" : "translate-x-full",
               "md:hidden flex flex-col space-y-4 p-4 z-100" // Increased z-index to be in front
             )}

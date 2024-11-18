@@ -29,7 +29,6 @@ const Hero: React.FC = () => {
   if (!mounted) return null;
 
   return (
-    // <div className="pb-24 sm:pb-16 md:pb-36 xl:pb-60 pt-16 md:pt-36"></div>
     <div className="">
       {theme === "dark" ? (
         <Spotlight
@@ -75,10 +74,17 @@ const Hero: React.FC = () => {
                 containerClassName="rounded-full"
                 as="button"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-                onClick={handleNewTab}
               >
-                <FaDownload />
-                <span>Resume</span>
+                <Link
+                  href={
+                    "https://drive.google.com/file/d/1uQQSRz8YF804P7k9ySMwJNK_uWBuBLiu/view?usp=sharing"
+                  }
+                  target="_blank"
+                  className="flex justify-center items-center space-x-2"
+                >
+                  <FaDownload />
+                  <span>Resume</span>
+                </Link>
               </HoverBorderGradient>
               <HoverBorderGradient
                 containerClassName="rounded-full"

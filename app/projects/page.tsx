@@ -7,9 +7,9 @@ import PageTransition from "@/components/PageTransition";
 
 const Projects = () => {
   return (
-    <main className="relative overflow-hidden mx-auto flex flex-col min-h-screen px-5 lg:px-[5em] xl:px-[10em] 2xl:px-[20em] pb-[2em]">
-      <PageTransition>
-        <Navbar navItems={navItems} className="text-black" />
+    <main className="relative overflow-hidden mx-auto flex flex-col min-h-screen lg:px-[5em] xl:px-[10em] 2xl:px-[20em] pb-[2em]">
+      <Navbar navItems={navItems} />
+      <PageTransition className="flex-grow flex flex-col px-5 md:px-10">
         <ProjectsList projectItems={projectItems} />
         <Footer />
       </PageTransition>

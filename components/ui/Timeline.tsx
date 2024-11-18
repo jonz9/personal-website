@@ -48,7 +48,7 @@ const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           My Experiences Over the Past Few Years
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-          A summary of what I've learned, attained and accomplished through
+          A summary of what I&apos;ve learned, attained and accomplished through
           various opportunities. A foundational base of my skillset that I use
           to tackle current and future problems.
         </p>

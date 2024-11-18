@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
+import { cn } from "@/utils/cn";
 
 const containerVariants = {
   hidden: {
@@ -25,9 +26,20 @@ const childVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeIn" } },
 };
 
-const PageTransition = ({ children }: { children: React.ReactNode }) => {
+const PageTransition = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <motion.div initial="hidden" animate="visible" variants={containerVariants}>
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className={cn(className)}
+    >
       {React.Children.map(children, (child) => (
         <motion.div variants={childVariants}>{child}</motion.div>
       ))}

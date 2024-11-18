@@ -9,7 +9,7 @@ import { SiDevpost } from "react-icons/si";
 const Footer = () => {
   const footerItems = [
     {
-      link: "/public/assets/John-Zhang-Resume.pdf",
+      link: "https://drive.google.com/file/d/1uQQSRz8YF804P7k9ySMwJNK_uWBuBLiu/view?usp=sharing",
       icon: <IoIosDocument className="text-2xl" />,
     },
     {
