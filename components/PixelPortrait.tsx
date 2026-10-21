@@ -140,11 +140,6 @@ export default function PixelPortrait({ src, alt }: Props) {
         aria-label={alt}
         className="block aspect-square w-full bg-line [image-rendering:pixelated]"
       />
-      <figcaption className="mt-2 font-mono text-[11px] leading-snug text-muted">
-        Fig. 1. The author at 24×24.{" "}
-        <span className="hidden [@media(hover:hover)]:inline">Hover to sharpen.</span>
-        <span className="[@media(hover:hover)]:hidden">Touch to sharpen.</span>
-      </figcaption>
     </figure>
   );
 }
