@@ -11,20 +11,6 @@ export const navItems = [
   { name: "Projects", link: "/#projects" },
 ];
 
-export const news = [
-  { date: "2026.05", text: "Joined Mecka AI in Toronto as a machine learning engineer." },
-  {
-    date: "2026",
-    text: "Our paper on word surprisal and contradiction in LLMs appeared at EACL 2026.",
-  },
-  { date: "2025", text: "Served as a secondary reviewer for EMNLP 2025 and COLM 2025." },
-  { date: "2025.05", text: "Joined WAT.ai to work on emotion recognition from body language." },
-  {
-    date: "2025",
-    text: "Our team placed 1st of 27 for Arabic at SemEval-2025 Task 2 (EA-MT).",
-  },
-];
-
 export const publications = [
   {
     title: "Word Surprisal Correlates with Sentential Contradiction in LLMs",

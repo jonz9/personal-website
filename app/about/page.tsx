@@ -1,11 +1,10 @@
 import Shell from "@/components/Shell";
-import { Intro, News } from "@/components/Sections";
+import { Intro } from "@/components/Sections";
 
 export default function About() {
   return (
     <Shell>
       <Intro />
-      <News />
     </Shell>
   );
 }

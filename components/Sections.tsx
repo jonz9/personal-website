@@ -1,4 +1,4 @@
-import { earlierProjects, experience, links, news, projects, publications } from "@/data";
+import { earlierProjects, experience, links, projects, publications } from "@/data";
 import portrait from "@/public/assets/images/portrait.jpg";
 import PixelPortrait from "./PixelPortrait";
 
@@ -30,7 +30,6 @@ export function Intro() {
           a research assistant at <a href="https://www.amii.ca" {...ext}>Amii</a> with Prof.
           Grzegorz Kondrak, working on language models and machine translation.
         </p>
-        <p className="text-muted">Away from a screen: guitar, music, and books.</p>
         <p className="flex flex-wrap gap-x-4 gap-y-1 pt-1 font-mono text-[13px]">
           <a href={links.email}>Email</a>
           <a href={links.cv} {...ext}>CV</a>
@@ -40,21 +39,6 @@ export function Intro() {
       </div>
       <PixelPortrait src={portrait} alt="Portrait of John Zhang, pixelated" />
     </section>
-  );
-}
-
-export function News() {
-  return (
-    <Section id="news" title="News">
-      <ul className="space-y-2">
-        {news.map((item) => (
-          <li key={item.text} className="grid grid-cols-[4.5rem_1fr] gap-3 text-[15px]">
-            <span className="pt-[3px] font-mono text-xs text-muted">{item.date}</span>
-            <span>{item.text}</span>
-          </li>
-        ))}
-      </ul>
-    </Section>
   );
 }
 
