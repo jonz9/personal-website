@@ -3,20 +3,33 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply box-border list-none p-0 m-0 scroll-smooth;
+  :root {
+    --bg: 251 250 247;
+    --fg: 28 27 25;
+    --muted: 110 107 101;
+    --line: 228 225 218;
+    --accent: 154 52 18;
+    color-scheme: light;
   }
 
-  *,
-  .color-transition {
-    transition: background-color 0.04s ease, color 0.07s ease;
+  .dark {
+    --bg: 19 19 18;
+    --fg: 232 230 225;
+    --muted: 150 147 140;
+    --line: 46 45 42;
+    --accent: 240 163 94;
+    color-scheme: dark;
   }
 
-  .icon-size {
-    @apply size-4 md:size-6 lg:size-8;
+  html {
+    scroll-behavior: smooth;
   }
 
-  .icon-hover {
-    @apply hover:bg-slate-400 hover:p-0 rounded-xl transition duration-150 ease-in-out;
+  a {
+    @apply underline decoration-line decoration-1 underline-offset-[3px] transition-colors hover:text-accent hover:decoration-accent;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.2);
   }
 }

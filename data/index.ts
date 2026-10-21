@@ -1,140 +1,113 @@
-import verity from "@/public/assets/projects/verity.png";
-import cryptoket from "@/public/assets/projects/cryptoket.png";
-import tmdbmovies from "@/public/assets/projects/TMDBMovies.png";
-import uvsanitizer from "@/public/assets/projects/uvsanitizer.png";
-import thissite from "@/public/assets/projects/this-site.png";
-import inprogress from "@/public/assets/projects/workinprogress.png";
-import black from "@/public/assets/projects/black.webp";
-
-export const jobTitles = [
-  "Software Developer",
-  "UI Designer",
-  "Computer Engineer",
-];
+export const links = {
+  email: "mailto:j444zhan@uwaterloo.ca",
+  cv: "https://drive.google.com/file/d/1uQQSRz8YF804P7k9ySMwJNK_uWBuBLiu/view?usp=sharing",
+  github: "https://github.com/jonz9",
+  linkedin: "https://www.linkedin.com/in/john-zhang4/",
+};
 
 export const navItems = [
-  { name: "About", link: "/about" },
-  { name: "Experience", link: "/experience" },
-  { name: "Projects", link: "/projects" },
-  // { name: "Photography", link: "/photography" },
+  { name: "Research", link: "/#publications" },
+  { name: "Experience", link: "/#experience" },
+  { name: "Projects", link: "/#projects" },
 ];
 
-export const aboutItems = [
-  "I'm a 2nd year, Computer Engineering student at the University of Waterloo, located in Ontario, Canada.",
-  "Interested in embedded software systems and human-computer interaction, I'm excited to learn from those around me and take on opportunities. When not being abused by course work, I like to do personal research and indulge in projects on app-development, embedded systems, and computer vision.",
-  "When I'm not busy with any of the above, I take my pick of playing guitar, listening to music, playing video games, or reading books.",
-];
-
-export const updates = [
-  "Learning more about embedded software and computer vision :)",
-];
-
-export const experienceData = [
+export const news = [
+  { date: "2026.05", text: "Joined Mecka AI in Toronto as a machine learning engineer." },
   {
-    title: "UI/UX Designer",
-    companyName: "FutureVault",
-    date: "May 2024 - August 2024",
-    content: [
-      "Drove user-centric product development by conducting client research, usability testing, collaborating in cross-functional teams, and creating high-fidelity wireframes using Figma and Illustrator",
-      "Streamlined Agile processes within a Scrum team, enhancing sprint efficiency by 20% through effective backlog grooming, sprint planning, and stakeholder alignment",
-    ],
+    date: "2026",
+    text: "Our paper on word surprisal and contradiction in LLMs appeared at EACL 2026.",
   },
+  { date: "2025", text: "Served as a secondary reviewer for EMNLP 2025 and COLM 2025." },
+  { date: "2025.05", text: "Joined WAT.ai to work on emotion recognition from body language." },
   {
-    title: "Software Developer",
-    companyName: "UW BioMechatronics Team",
-    date: "Sept 2023 - Apr 2024",
-    content: [
-      "Optimized EMG fabric's client-side program for BLE data transfer with the ESP32, improving memory management and latency, and reducing program build time by 25%",
-      "Improved EMG sensor feedback display accuracy by 28% and reduced response time by 20% through debugging signal processing algorithms and optimizing a Kalman Filter for effective noise reduction",
-    ],
-  },
-  {
-    title: "Computer Technician Intern",
-    companyName: "reBoot Canada",
-    date: "Jun 2022 - Aug 2022",
-    content: [
-      "Assisted the reBoot team with online sales by confirming purchases and shipping out 100+ products",
-      "Repaired and refurbished 200+ laptops / PCs to ensure they were up to store standards",
-    ],
+    date: "2025",
+    text: "Our team placed 1st of 27 for Arabic at SemEval-2025 Task 2 (EA-MT).",
   },
 ];
 
-export const projectItems = [
+export const publications = [
   {
-    name: "Shot",
-    subtitle: "Automatic Portolio Management for Photographers",
-    link: "https://github.com/jonz9/Portfolio-Management-System",
-    github: "https://github.com/jonz9/Portfolio-Management-System",
-    description:
-      "A photo management platform that enables photographers to upload, organize, and categorize images through buckets and an image classifer ML model. Built with authorization and S3 integration, photos can be organized seamlessly into a user's account under automatically classified categories.",
-    image: black,
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "Express.js",
-      "AWS",
-      "OpenCV",
-      "Python",
+    title: "Word Surprisal Correlates with Sentential Contradiction in LLMs",
+    authors: ["Ning Shi", "Bradley Hauer", "David Basil", "John Zhang", "Grzegorz Kondrak"],
+    venue: "EACL 2026",
+    link: "https://aclanthology.org/2026.eacl-long.211/",
+  },
+  {
+    title:
+      "UAlberta at SemEval-2025 Task 2: Prompting and Ensembling for Entity-Aware Translation",
+    authors: [
+      "Ning Shi",
+      "David Basil",
+      "Bradley Hauer",
+      "Noshin Nawal",
+      "Jai Riley",
+      "Daniela Teodorescu",
+      "John Zhang",
+      "Grzegorz Kondrak",
     ],
+    venue: "SemEval 2025",
+    note: "1st / 27 teams, Arabic",
+    link: "https://aclanthology.org/2025.semeval-1.224/",
+  },
+];
+
+export const experience = [
+  {
+    role: "Machine Learning Engineer",
+    org: "Mecka AI",
+    date: "2026 – now",
+    text: "Egocentric video and hand-pose pipelines, motion-capture sync, and preference and RL fine-tuning for VLM video labeling.",
+  },
+  {
+    role: "Machine Learning Engineer",
+    org: "WAT.ai",
+    date: "2025",
+    text: "Emotion recognition from body language on BoLD, using pose keypoints and video transformers.",
+  },
+  {
+    role: "Research Assistant",
+    org: "Alberta Machine Intelligence Institute",
+    date: "2025",
+    text: "NLP research with Prof. Grzegorz Kondrak and Ning Shi on LLM surprisal and entity-aware machine translation.",
+  },
+  {
+    role: "UI/UX Designer Intern",
+    org: "FutureVault",
+    date: "2024",
+    text: "Prototyping and usability research for a document-management product.",
+  },
+  {
+    role: "Firmware Developer",
+    org: "UW BioMechatronics",
+    date: "2023 – 24",
+    text: "ESP32 BLE data transfer and Kalman filtering for an EMG sensor fabric.",
+  },
+];
+
+export const projects = [
+  {
+    name: "Simulated Autonomous Navigation",
+    tags: "C++ · ROS 2 · Gazebo",
+    text: "A full ROS 2 navigation stack: costmaps, global map fusion, A* planning, and pure-pursuit control.",
+    link: "https://github.com/jonz9/simulated-autonomous-navigation-system",
+  },
+  {
+    name: "Gesture OS",
+    tags: "Python · MediaPipe · TensorFlow",
+    text: "Real-time device control from hand gestures, with small MLPs for static and temporal gestures.",
+    link: "https://github.com/jonz9/gesture-tracked-navigator",
   },
   {
     name: "Verity",
-    subtitle: "Charity Management System { BlockHacks 2024 Winner }",
-    link: "https://charity-management-system-akle.vercel.app/",
-    github: "https://github.com/jonz9/Charity-Management-System",
-    description:
-      "Management database and server, integrated with blockchain technology to aid charities in achieving transparent donations and tracked destination. The system registrate charities that apply onto the database and will push transations/donations onto the blockchain using the Astrokode IDE.",
-    image: verity,
-    technologies: [
-      "React",
-      "JavaScript",
-      "Node.js",
-      "Express.js",
-      "AstroKode",
-      "MongoDB",
-      "Docker",
-      "Tailwind",
-    ],
+    tags: "React · Node · Solidity",
+    text: "Transparent charity donations tracked on a blockchain ledger. BlockHacks 2024 winner.",
+    link: "https://github.com/jonz9/Charity-Management-System",
   },
-  {
-    name: "CryptoKet",
-    subtitle: "Concurrent Cryptocurrency Tracking Website",
-    link: "https://crypto-ket-johns-projects-3415155d.vercel.app/",
-    github: "https://github.com/jonz9/CryptoKet",
-    description:
-      "Designed with the CoinGecko API to manipulate current cryptocurrency data such as price, trading volume, and synchronous growth, along with IAM management",
-    image: cryptoket,
-    technologies: ["React", "TypeScript", "Tailwind", "Clerk", "ShadCN"],
-  },
-  {
-    name: "Automatic UV Sanitizer",
-    subtitle: "Final Design Project for ECE198",
-    link: "https://drive.google.com/file/d/1gk1BDBBo0buBlnHNTibTfT1PPigvsSfO/view?usp=sharing",
-    github: "https://github.com/jonz9/Auto-UV-Sanitizer.git",
-    description:
-      "UV Sanitizer designed as a solution to combat the high density of bacteria on hospital door handles. Configured peripheral settings using the STM32CubeIDE to output UV rays in automatic intervals, whilst also optimizing energy consumption due to both manual and automatic options",
-    image: uvsanitizer,
-    technologies: ["C", "STM32", "GitLab"],
-  },
-  {
-    name: "Movie Retail Site",
-    subtitle: "Site that displays up-to-date movie data",
-    link: "https://movie-store-sigma.vercel.app/",
-    github: "https://github.com/jonz9/MovieStore",
-    description:
-      "Consuming the TMDBMovies API, it displays concurrent movie data, with implementation of user authentication and protocols, and facilitates seamless movie purchases through the database powered by Firestore",
-    image: tmdbmovies,
-    technologies: ["Vue", "JavaScript", "Firebase", "Firestore", "CSS"],
-  },
-  {
-    name: "This Website",
-    subtitle: "A site designed and built to show who I am as a student",
-    link: "/",
-    github: "https://github.com/jonz9/personal-website.git",
-    description:
-      "Shows the experiences I have, the type of learner I am, and the skills I have accumulated over numerous opportunities. This site will continue to update throughout my career as an engineer.",
-    image: thissite,
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Sentry"],
-  },
+];
+
+export const earlierProjects = [
+  { name: "CryptoKet", link: "https://github.com/jonz9/CryptoKet" },
+  { name: "Movie Store", link: "https://github.com/jonz9/MovieStore" },
+  { name: "Auto UV Sanitizer", link: "https://github.com/jonz9/Auto-UV-Sanitizer" },
+  { name: "This site", link: "https://github.com/jonz9/personal-website" },
 ];
