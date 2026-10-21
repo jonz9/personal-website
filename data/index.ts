@@ -1,6 +1,6 @@
 export const links = {
   email: "mailto:j444zhan@uwaterloo.ca",
-  cv: "https://drive.google.com/file/d/1uQQSRz8YF804P7k9ySMwJNK_uWBuBLiu/view?usp=sharing",
+  cv: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/John-Zhang-Resume.pdf`,
   github: "https://github.com/jonz9",
   linkedin: "https://www.linkedin.com/in/john-zhang4/",
 };
@@ -83,17 +83,4 @@ export const projects = [
     text: "Real-time device control from hand gestures, with small MLPs for static and temporal gestures.",
     link: "https://github.com/jonz9/gesture-tracked-navigator",
   },
-  {
-    name: "Verity",
-    tags: "React · Node · Solidity",
-    text: "Transparent charity donations tracked on a blockchain ledger. BlockHacks 2024 winner.",
-    link: "https://github.com/jonz9/Charity-Management-System",
-  },
-];
-
-export const earlierProjects = [
-  { name: "CryptoKet", link: "https://github.com/jonz9/CryptoKet" },
-  { name: "Movie Store", link: "https://github.com/jonz9/MovieStore" },
-  { name: "Auto UV Sanitizer", link: "https://github.com/jonz9/Auto-UV-Sanitizer" },
-  { name: "This site", link: "https://github.com/jonz9/personal-website" },
 ];

@@ -1,4 +1,4 @@
-import { earlierProjects, experience, links, projects, publications } from "@/data";
+import { experience, links, projects, publications } from "@/data";
 import portrait from "@/public/assets/images/portrait.jpg";
 import PixelPortrait from "./PixelPortrait";
 
@@ -107,16 +107,6 @@ export function Projects() {
           </li>
         ))}
       </ul>
-      <p className="mt-6 text-sm text-muted">
-        Earlier:{" "}
-        {earlierProjects.map((p, i) => (
-          <span key={p.name}>
-            <a href={p.link} {...ext}>{p.name}</a>
-            {i < earlierProjects.length - 1 && ", "}
-          </span>
-        ))}
-        .
-      </p>
     </Section>
   );
 }
